@@ -1,0 +1,24 @@
+<link rel="stylesheet" ...>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meu Site em Flask - Contato</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Entre em Contato</h1>
+    <p>Esta é a página de contato do nosso site em Flask.</p>
+    <p>Você pode nos enviar uma mensagem usando o formulário abaixo:</p>
+    <form action="/enviar_contato" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea><br>
+        <button type="submit">Enviar</button>
+    </form>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
+
